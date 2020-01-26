@@ -1,0 +1,56 @@
+{
+  "author": "Joseph Brick",
+  "commands": [{
+      "script": "main.js",
+      "name": "Organize Now",
+			"shortcut" : "cmd option control d",
+      "identifier": "organizeDocument",
+      "handlers": {
+        "run": "_organizeDocument"
+      }
+    },
+    {
+      "script": "main.js",
+      "name": "Update Callouts on Artboard",
+			"shortcut" : "cmd option d",
+      "identifier": "updateCalloutsOnArtboard",
+      "handlers": {
+        "run": "_updateCalloutsOnArtboard"
+      }
+    },
+    {
+      "script": "main.js",
+      "name": "Settings",
+      "identifier": "settings",
+      "handlers": {
+        "run": "_settings"
+      }
+    },
+    {
+      "name": "layersresized",
+      "identifier": "layersresized",
+      "script": "main.js",
+      "handlers": {
+        "actions": {
+          "LayersResized.finish": "_onLayersResizedFinish"
+        }
+      }
+    }
+  ],
+  "menu": {
+    "title": "Organize Document Beta",
+    "items": [
+      "organizeDocument",
+      "updateCalloutsOnArtboard",
+      "-",
+      "settings"
+    ]
+  },
+  "identifier": "https://github.com/josephxbrick/organize-sketch-doc-beta",
+  "homepage": "https://github.com/josephxbrick/documentorganizer",
+  "version": "1.0",
+  "icon" : "icon.png",
+  "description": "Organize design documents by creating a table of contents, adding page/section numbers, and managing callouts in mockups.",
+  "authorEmail": "jbrick@gmail.com",
+  "name": "Organize Design Document Beta"
+}
